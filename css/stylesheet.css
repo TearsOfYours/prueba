@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+* {
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+}
+
+
+.navegador {
+    display: flex;
+    border: 5px, red, solid;
+       
+}
+
+.navegador_espacio {
+    border: 2px, blue, solid;
+    padding: 0.79em;
+    margin: 0.5em;
+    border-radius: 25%;
+    
+}
