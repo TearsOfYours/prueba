@@ -1,29 +1,125 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
 * {
   font-family: "Lato", Arial, Helvetica, sans-serif;
-}
-ul, li {
-  list-style: none;
-  margin: 0;
   padding: 0;
-}
-nav{
-  background-color:antiquewhite ;
-}
-.navegador {
-    display: flex;
-    align-items: center;
-    border: 5px red solid;
-  }
-.caja {
-  border: 2px blue solid;
-  border-radius: 25%;
-  padding: 0.79em;
-  margin: 0.5em;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-
-/*.caja:nth-last-child(2) {
-  margin-left: auto;
+input:focus {
+  outline: none;
 }
-  */
+
+body {
+  background-color: #8174A0;
+  width: 100%;
+}
+.borde {
+  width: 100%;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+/*NAVEGADOR*/
+nav {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+nav  div {
+  display: flex;
+  gap: 0.6em;
+}
+
+nav a, nav span {
+  padding: 0.7em;
+  background-color: #c0b3de;
+  border-radius: 1em;
+}
+
+nav span > input {
+  font-size: 1em;
+  background-color: transparent;
+  border: none;
+}
+nav i {
+  font-size: 2em;
+  color:#c0b3de;
+}
+nav span i {
+  font-size: 1em;
+  color: black;
+}
+/*SECCIÓN HERO ASIDE*/
+section {
+  display: flex;
+  width: 100%;
+}
+.hero {
+  height: 30em;
+}
+.lanzamientos{
+  display: flex;
+  width: 30%;
+  flex-direction: column;
+  align-items: center;
+  background-color: antiquewhite;
+}
+.lanzamientos img {
+  width: 12em;
+  border-radius: 1em;
+  margin-bottom: 0.8em;
+}
+.lanzamientos h2 {
+  margin-bottom: 0.8em;
+}
+.lanzamientos span {
+  display: flex;
+  gap: 0.5em;
+  width: 100%;
+  justify-content: center;
+}
+.lanzamientos span h3 {
+  font-size: 15px;
+  padding: 0.7em;
+  border-radius: 0.9em;
+  background-color: bisque;
+  margin-bottom: 1em;
+}
+.plus_18 {
+  background-color: red !important;
+}
+/*SECCIÓN HERO CENTER*/
+.recomendados {
+  display: flex;
+  position: relative;
+  width: 70%;
+  background-color: aqua;
+}
+.recomendados img{
+  width: 100%;
+  height: auto;
+  /* Object-fit: cover*/
+}
+.recomendados .lateral {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  position: absolute; 
+}
+.recomendados .lateral span, .recomendados .lateral h2 {
+  padding: 0.5em;
+  width: fit-content;
+  border-radius: 1em;
+  background-color: rgba(129, 116, 160, 0.4);
+}
+.recomendados .lateral > div {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}

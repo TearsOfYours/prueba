@@ -11,50 +11,57 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
         rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
 <body>
-    <h1>Titulo de la página</h1>
-    <h2>Eslogan (opcional)</h2>
-    <nav>
-        <ul class="navegador">
-            <li class="caja"><a href="#">Inicio</a></li>
-            <li class="caja"><a href="#">Series</a></li>
-            <li class="caja">
-                <a href="#"> Películas</a>
-                <ul>
-                    <li><a href="#">Acción</a></li>
-                    <li><a href="#">Comedia</a></li>
-                    <li><a href="#">Shonen</a></li>
+    <div class="borde">
+        <nav class="">
+            <div>
+                <a class="">Inicio</a>
+                <a class="">Mis Listas</a>
+                <a class="">Próximos estrenos</a>
+                <a class="">Novedades</a>
+            </div>
+            <div>
+                <span>
+                    <input type="text" placeholder="Buscar...">
+                    <i class="bi bi-search"></i>
+                </span>
+                <i class="bi bi-list"></i>
+            </div>
+        </nav>
+        <section class="hero">
+            <div class="lanzamientos">
+                <h2>Últimos lanzamientos</h2>
+                <img src="./img/HL3_square.png">
+                <span>
+                    <h3 class="plus_18">18+</h3>
+                    <h3>Acción</h3>
+                    <h3>Aventura</h3>
+                </span>
+            </div>
+            <div class="recomendados">
+                <img src="./img/frieren.jpeg">
+                <div class="lateral">
+                    <h2>Recomendados</h2>
+                    <div class="">
+                        <span>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </span>
+                        <h2>Sōsō no Frieren</h2>
+                        <h2>+12</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
 
-                </ul>
-            </li>
-            <li class="caja"><a href="#">Listas</a></li>
-            <li class="caja"><a href="#">Novedades</a></li>
-        </ul>
-        <!--<div class="caja">
-                <h2>Inicio</h2>
-            </div>
-            <div class="caja">
-                <h2>Series</h2>
-            </div>
-            <div class="caja">
-                <h2>Peliculas</h2>
-            </div>
-            <div class="caja">
-                <h2 >Listas</h2>
-            </div>
-            <div class="caja">
-                <h2>Novedades</h2>
-            </div>
-            <div class="caja">
-                <input type="search" placeholder="Buscar...">
-            </div>
-            <div class="caja">
-                <input type="search" placeholder="Buscar...">
-            </div> -->
-    </nav>
+
 </body>
 
 </html>
