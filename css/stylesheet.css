@@ -65,7 +65,9 @@ section {
 
 /* Clasificación por edades */
 .plus_12 {
-  background-color: aqua !important;
+  background-color:rgba(220, 244, 107, 70%);
+  width: 2em;
+  border-radius: 1em;
 }
 
 .plus_18 {
