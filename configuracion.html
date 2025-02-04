@@ -6,21 +6,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil</title>
     <link rel="stylesheet" href="./css/stylesheet_profile.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
 <body>
-    <section class="borde">
-        <div class="">
-            <div class="cabecera">
-                <span>
-                    <img src="img/HL3_square.png">
-                </span>
-                <span>
-                    <p>HOLA</p>
-                </span>
-            </div>
+    <div class="borde">
+        <div class="flex">
+            <nav>
+                <div>
+                    <a>Inicio</a>
+                    <a>Mis Listas</a>
+                    <a>Próximos estrenos</a>
+                    <a>Novedades</a>
+                </div>
+            </nav>
+            <nav>
+                <div>
+                    <span>
+                        <input type="text" placeholder="Buscar...">
+                        <i class="bi bi-search"></i>
+                    </span>
+                    <i class="bi bi-list"></i>
+                </div>
+            </nav>
         </div>
-    </section>
+        <section class="borde">
+            <div>
+                <div class="cabecera">
+                    <img class="foto_perfil" src="img/HL3_square.png">
+                    <!--<span class="change-text"> Cambiar foto de perfil</span>-->
+                    <span>
+                        <p class="titulo">Gerardas Sabaliauskas</p>
+                    </span>
+                </div>
+            </div>
+        </section>
+        <section class="borde">
+            <div class="orden">
+                <div class="correo">
+                    <div>
+                        <p>Correo:</p>
+                    </div>
+                    <div>
+                        <p>gersab2@alu.gva.edu.es</p>
+                    </div>
+                </div>
+                <div class="tipo_subscripcion">
+                    <div>
+                        <p>Tipo de subscripción:</p>
+                    </div>
+                    <div>
+                        Subscripción estandar(1080p, no ads)
+                    </div>
+                </div>
+                <div class="subscripcion">
+                    <div>
+                        <p>Tu suscripción caducará el día: 1/2/25</p>
+                    </div>
+                    <div>
+                        <input type="button" value="Cancelar suscripcion" class="cancelar">
+                    </div>
+                </div>
+                <div class="borrar-cerrar">
+                    <div>
+                        <input type="button" value="Borrar cuenta" class="borrar">
+                    </div>
+                    <div>
+                        <input type="button" value="Cerrar sesión" class="cerrar">
+                    </div>
+                </div>
+            </div>
+        </section>
 
 </body>
 
