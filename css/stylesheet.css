@@ -22,20 +22,42 @@ body {
 }
 /*NAVEGADOR*/
 nav {
-  font-size: 20px;
+  font-size: 21px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: start;
   width: 100%;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
 }
-nav  div {
+.group_up {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.group_up:nth-child(1){
+  justify-content: end;
+}
+
+nav  ul {
   display: flex;
   gap: 0.6em;
 }
+ul {
+  list-style-type:none;
+  overflow: hidden;
+}
+li a{
+  border-radius: 1em;
+  display: block;
+  text-decoration: none;
+  color: black;
+}
+li:hover {
+  background-color: #534b67;
+}
 
-nav a, nav span {
+nav li, nav span {
   padding: 0.7em;
   background-color: #c0b3de;
   border-radius: 1em;
