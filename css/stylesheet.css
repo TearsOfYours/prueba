@@ -15,11 +15,7 @@ body {
   background-color: #8174A0;
   width: 100%;
 }
-.borde {
-  width: 100%;
-  padding-left: 1em;
-  padding-right: 1em;
-}
+
 /*NAVEGADOR*/
 nav {
   font-size: 20px;
@@ -30,6 +26,7 @@ nav {
   padding-top: 0.5em;
   padding-bottom: 0.5em;
 }
+
 nav  div {
   display: flex;
   gap: 0.6em;
@@ -59,147 +56,191 @@ section {
   display: flex;
   width: 100%;
 }
-.hero {
-  height: 30em;
+
+/*Modelo Grande*/
+@media (min-width: 1024px){
+
+  /*Bordes de pagina web*/
+  .borde {
+    width: 100%;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+
+  /*Estructura del Nav*/
+  .Estructura-nav {
+    display: flex;
+  }
+
+  .hero {
+    height: 30em;
+  }
+  
+  /* Clasificación por edades */
+  
+  .plus_12 {
+    background-color: aqua !important;
+    width: 2em;
+    border-radius: 1em;
+    color: #000;
+  }
+  
+  .plus_18 {
+    background-color: red !important;
+  }
+  
+   /* Puntaje en estrellas */
+  .puntaje {
+    display: flex;
+    width: 7em;
+    height: 1.5em;
+    background-color: rgb(129, 116, 160, 70%);
+    justify-content: space-around;
+    border-radius: 1em;
+    align-items: center;
+  }
+  
+  .puntaje-bordes {
+    padding-top: 1em;
+  }
+  
+  /* Categorias */
+  
+  .categoria {
+    display: flex;
+    width: 7em;
+    height: 1.5em;
+    background-color: rgb(129, 116, 160, 70%);
+    justify-content: space-around;
+    border-radius: 1em;
+    align-items: center;
+  }
+  
+  .categoria-bordes {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1em;
+    width: 15em ;
+  }
+  
+  /* Contenedor del carrusel */
+  .carrusel-contenedor {
+    width: 100%;
+    height: 60vh; /* Altura del carrusel (ajusta según tus necesidades) */
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .carrusel {
+    display: flex;
+    position: relative;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    background-color: aqua;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .carrusel-objeto {
+    position: relative;
+    scroll-snap-align: start;
+    flex: 0 0 100%;
+    width: 100%;
+    height: 100%;
+    background-color: #c0b3de;
+  }
+  
+  .carrusel-objeto img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .carrusel-texto {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 8), rgba(0, 0, 0, 0));
+    color: white;
+    padding: 1em;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .carrusel-texto h2 {
+    margin: 0;
+    font-size: clamp(20px, 5vw, 36px); /* Texto responsive */
+  }
+  
+  .carrusel-texto p {
+    padding-bottom: 1em;
+    margin: 0.5em 0 0;
+    font-size: clamp(14px, 3vw, 18px); /* Texto responsive */
+  }
+  
+  /* Sección de tarjetas */
+  .expositor-tarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    padding: 1em;
+    justify-content: center;
+  }
+  
+  /* Estilos para las tarjetas */
+  .tarjeta {
+    width: 13em;
+    background: #333;
+    color: white;
+    border-radius: 1em;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .tarjeta img {
+    width: 100%;
+    height: 20em;
+    object-fit: cover; /* Ajusta la imagen sin deformarla */
+  }
+  
+  .tarjeta h3 {
+    margin: 0.5em 0;
+    font-size: 18px;
+  }
+  
+  .tarjeta:hover {
+    transform: scale(1.05); /* Efecto de hover */
+  }
+
 }
 
-/* Clasificación por edades */
+@media (max-width: 1024px){
 
-.plus_12 {
-  background-color: aqua !important;
-  width: 2em;
-  border-radius: 1em;
-  color: #000;
 }
 
-.plus_18 {
-  background-color: red !important;
+@media (max-width: 768px){
+
 }
 
- /* Puntaje en estrellas */
-.puntaje {
-  display: flex;
-  width: 7em;
-  height: 1.5em;
-  background-color: rgb(129, 116, 160, 70%);
-  justify-content: space-around;
-  border-radius: 1em;
-  align-items: center;
-}
+/*Modelo Compacto*/
+@media (max-width: 480px) {
 
-.puntaje-bordes {
-  padding-top: 1em;
-}
+  .borde {
+    width: 100%;
+    padding-left: 0em;
+    padding-right: 0em;
+  }
 
-/* Categorias */
+  nav {
+    padding: 1em;
+  }
 
-.categoria {
-  display: flex;
-  width: 7em;
-  height: 1.5em;
-  background-color: rgb(129, 116, 160, 70%);
-  justify-content: space-around;
-  border-radius: 1em;
-  align-items: center;
-}
-
-.categoria-bordes {
-  padding-top: 1em;
-}
-
-/* Contenedor del carrusel */
-.carrusel-contenedor {
-  width: 100%;
-  height: 60vh; /* Altura del carrusel (ajusta según tus necesidades) */
-  overflow: hidden;
-  position: relative;
-}
-
-/*SECCIÓN HERO CENTER*/
-.carrusel {
-  display: flex;
-  position: relative;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
-  background-color: aqua;
-  width: 100%;
-  height: 100%;
-}
-
-.carrusel-objeto {
-  position: relative;
-  scroll-snap-align: start;
-  flex: 0 0 100%;
-  width: 100%;
-  height: 100%;
-  background-color: #c0b3de;
-}
-.carrusel-objeto img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.carrusel-texto {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 70%;
-  height: 100%;
-  background: linear-gradient(to right, rgba(0, 0, 0, 8), rgba(0, 0, 0, 0));
-  color: white;
-  padding: 1em;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.carrusel-texto h2 {
-  margin: 0;
-  font-size: clamp(20px, 5vw, 36px); /* Texto responsive */
-}
-
-.carrusel-texto p {
-  padding-bottom: 1em;
-  margin: 0.5em 0 0;
-  font-size: clamp(14px, 3vw, 18px); /* Texto responsive */
-}
-
-/* Sección de tarjetas */
-.expositor-tarjetas {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1em;
-  padding: 1em;
-  justify-content: center;
-}
-
-/* Estilos para las tarjetas */
-.tarjeta {
-  width: 13em;
-  background: #333;
-  color: white;
-  border-radius: 1em;
-  overflow: hidden;
-  text-align: center;
-  transition: transform 0.3s ease;
-}
-
-.tarjeta img {
-  width: 100%;
-  height: 20em;
-  object-fit: cover; /* Ajusta la imagen sin deformarla */
-}
-
-.tarjeta h3 {
-  margin: 0.5em 0;
-  font-size: 18px;
-}
-
-.tarjeta:hover {
-  transform: scale(1.05); /* Efecto de hover */
 }
