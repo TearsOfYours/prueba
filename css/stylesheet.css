@@ -72,21 +72,50 @@ section {
     display: flex;
   }
 
+  .nav-logo {
+    height: 3em; /* Ajusta la altura según sea necesario */
+    margin-right: 0.5em; /* Espacio entre la imagen y los enlaces */
+    border-radius: 1em; /* Bordes curvados para que coincida con los enlaces */
+    background-color: rgb(94, 87, 109, 70%); /* Fondo para que coincida con los enlaces */
+    padding: 0.2em; /* Espacio alrededor de la imagen */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Sombra para que coincida con los enlaces */
+  }
+
+  .nav1{
+    align-items: center;
+  }
+
+  .nav1 a{
+    text-align: center; /* Alinea el texto al centro */
+  }
+
+
+  .nav2{
+    justify-content: flex-end;
+  }
+
   .hero {
     height: 30em;
   }
   
   /* Clasificación por edades */
   
-  .plus_12 {
-    background-color: aqua !important;
-    width: 2em;
-    border-radius: 1em;
+  .plus_12 h3{
+    background-color: #00bcd4 !important; /* Aqua un poco más oscuro */
     color: #000;
+    border-radius: 0.5em; /* Bordes curvados */
+    padding: 0.2em 0.5em; /* Espacio alrededor del texto */
+    display: inline-block; /* Para que el fondo se ajuste al texto */
+    font-size: clamp(14px, 2vw, 20px); /* Texto responsive */
   }
   
-  .plus_18 {
-    background-color: red !important;
+  .plus_18 h3{
+    background-color: #ff0000 !important; /* Rojo */
+    color: #000;
+    border-radius: 0.5em; /* Bordes curvados */
+    padding: 0.2em 0.5em; /* Espacio alrededor del texto */
+    display: inline-block; /* Para que el fondo se ajuste al texto */
+    font-size: clamp(14px, 2vw, 20px); /* Texto responsive */
   }
   
    /* Puntaje en estrellas */
@@ -118,9 +147,11 @@ section {
   
   .categoria-bordes {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start; /* Alinea los elementos al inicio */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente línea */
+    gap: 1em; /* Aumenta el espacio entre los elementos */
     padding-top: 1em;
-    width: 15em ;
+    width: 25em;
   }
   
   /* Contenedor del carrusel */
@@ -129,26 +160,23 @@ section {
     height: 60vh; /* Altura del carrusel (ajusta según tus necesidades) */
     overflow: hidden;
     position: relative;
+    margin-bottom: 1em;
   }
-  
+
   .carrusel {
     display: flex;
     position: relative;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
-    background-color: aqua;
-    width: 100%;
+    width: 100%; /* Ajusta según el número de elementos */
     height: 100%;
+    animation: slide 20s infinite; /* Duración de la animación */
   }
-  
+
   .carrusel-objeto {
-    position: relative;
-    scroll-snap-align: start;
-    flex: 0 0 100%;
+    flex: 0 0 100%; /* Ajusta para mostrar un elemento a la vez */
     width: 100%;
     height: 100%;
+    scroll-snap-align: start;
+    position: relative;
     background-color: #c0b3de;
   }
   
@@ -183,9 +211,32 @@ section {
     padding-bottom: 1em;
     margin: 0.5em 0 0;
     font-size: clamp(14px, 3vw, 18px); /* Texto responsive */
+    word-wrap: break-word; /* Permite que las palabras largas se dividan */
+    text-align: left;
+    width: 100%; 
+    max-width: 50%; /* Ajusta el ancho máximo del párrafo */
   }
+
+/* Animación del carrusel */
+@keyframes slide {
+  0% { transform: translateX(0%); }
+  25% { transform: translateX(0%); }
+  33.33% { transform: translateX(-100%); }
+  58.33% { transform: translateX(-100%); }
+  66.66% { transform: translateX(-200%); }
+  91.66% { transform: translateX(-200%); }
+  100% { transform: translateX(0%); }
+}
   
+
   /* Sección de tarjetas */
+  .contenedor-principal {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 1em;
+  }
+
   .expositor-tarjetas {
     display: flex;
     flex-wrap: wrap;
