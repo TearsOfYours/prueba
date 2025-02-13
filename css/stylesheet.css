@@ -292,23 +292,248 @@ section {
 
 }
 
+
 /* Modelo Mediano (Para tablets en horizontal) */
+
 @media (max-width: 1024px){
+
+  /*Estructura del Nav*/
+  .Estructura-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 3.8em;
+    background-color: #8174A0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5em;
+    padding-left: 0,5em;
+  }
+  
+  .nav-logo {
+    height: 3em; /* Ajusta la altura según sea necesario */
+    margin-right: 0.5em; /* Espacio entre la imagen y los enlaces */
+    border-radius: 1em; /* Bordes curvados para que coincida con los enlaces */
+    background-color: rgb(94, 87, 109, 70%); /* Fondo para que coincida con los enlaces */
+    padding: 0.2em; /* Espacio alrededor de la imagen */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Sombra para que coincida con los enlaces */
+  }
+
+  /*Botones de barra de navegación*/
   .display {  /*Quitar los botones de Inicio, Mis listas, etcc*/
     display: none;
   }
+
   .display_icons:nth-child(1) { /*ICONO DE LA PAGINA DESACTIVAR*/
     display: none;
   }
   .display_icons {  /*Mostrar los iconos*/
     display: block;
   }
+  
+  .nav1{
+    display: flex;
+  }
+  
+  .nav1 ul, .nav2 ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1em;
+  }
+  
+  .nav2{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+  
+  .hero {
+    height: 40em;
+  }
+    
+  /* Clasificación por edades */
+    
+  .plus_12 h3{
+    background-color: #00bcd4 !important; /* Aqua un poco más oscuro */
+    color: #000;
+    border-radius: 0.5em; /* Bordes curvados */
+    padding: 0.2em 0.5em; /* Espacio alrededor del texto */
+    display: inline-block; /* Para que el fondo se ajuste al texto */
+    font-size: clamp(14px, 2vw, 20px); /* Texto responsive */
+  }
+    
+  .plus_18 h3{
+    background-color: #ff0000 !important; /* Rojo */
+    color: #000;
+    border-radius: 0.5em; /* Bordes curvados */
+    padding: 0.2em 0.5em; /* Espacio alrededor del texto */
+    display: inline-block; /* Para que el fondo se ajuste al texto */
+    font-size: clamp(14px, 2vw, 20px); /* Texto responsive */
+  }
+    
+  /* Puntaje en estrellas */
+  .puntaje {
+    display: flex;
+    width: 7em;
+    height: 1.5em;
+    background-color: rgb(129, 116, 160, 70%);
+    justify-content: space-around;
+    border-radius: 1em;
+    align-items: center;
+  }
+    
+  .puntaje-bordes {
+    padding-top: 1em;
+  }
+    
+  /* Categorias */
+    
+  .categoria {
+    display: flex;
+    width: 7em;
+    height: 1.5em;
+    background-color: rgb(129, 116, 160, 70%);
+    justify-content: space-around;
+    border-radius: 1em;
+    align-items: center;
+  }
+    
+  .categoria-bordes {
+    display: flex;
+    justify-content: flex-start; /* Alinea los elementos al inicio */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente línea */
+    gap: 1em; /* Aumenta el espacio entre los elementos */
+    padding-top: 1em;
+    width: 25em;
+  }
+    
+  /* Contenedor del carrusel */
+  .carrusel-contenedor {
+    width: 95%;
+    height: 100%; /* Altura del carrusel (ajusta según tus necesidades) */
+    overflow: hidden;
+    position: relative;
+    margin-left: 3.8em;
+  }
+  
+  .carrusel {
+    display: flex;
+    position: relative;
+    width: 100%; /* Ajusta según el número de elementos */
+    height: 100%;
+    animation: slide 20s infinite; /* Duración de la animación */
+  }
+  
+  .carrusel-objeto {
+    flex: 0 0 100%; /* Ajusta para mostrar un elemento a la vez */
+    width: 100%;
+    height: 100%;
+    scroll-snap-align: start;
+    position: relative;
+    background-color: #c0b3de;
+  }
+    
+  .carrusel-objeto img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+    
+  .carrusel-texto {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 8), rgba(0, 0, 0, 0));
+    color: white;
+    padding: 1em;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+    
+  .carrusel-texto h2 {
+    margin: 0;
+    font-size: clamp(20px, 5vw, 36px); /* Texto responsive */
+  }
+    
+  .carrusel-texto p {
+    padding-bottom: 1em;
+    margin: 0.5em 0 0;
+    font-size: clamp(14px, 3vw, 18px); /* Texto responsive */
+    word-wrap: break-word; /* Permite que las palabras largas se dividan */
+    text-align: left;
+    width: 100%; 
+    max-width: 50%; /* Ajusta el ancho máximo del párrafo */
+  }
+  
+  /* Animación del carrusel */
+  @keyframes slide {
+    0% { transform: translateX(0%); }
+    25% { transform: translateX(0%); }
+    33.33% { transform: translateX(-100%); }
+    58.33% { transform: translateX(-100%); }
+    66.66% { transform: translateX(-200%); }
+    91.66% { transform: translateX(-200%); }
+    100% { transform: translateX(0%); }
+  }
+    
+  
+  /* Sección de tarjetas */
+  .contenedor-principal {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 1em;
+    background-color: rgb(192, 179, 222);
+  }
+  
+  .expositor-tarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    padding: 1em;
+    justify-content: center;
+  }
+  
+  /* Estilos para las tarjetas */
+  .tarjeta {
+    width: 13em;
+    background: #333;
+    color: white;
+    border-radius: 1em;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .tarjeta img {
+    width: 100%;
+    height: 20em;
+    object-fit: cover; /* Ajusta la imagen sin deformarla */
+  }
+  
+  .tarjeta h3 {
+    margin: 0.5em 0;
+    font-size: 18px;
+  }
+  
+  .tarjeta:hover {
+    transform: scale(1.05); /* Efecto de hover */
+  }
+
 }
 
 /* Modelo Normal (Para tablets en vertical) */
+
 @media (max-width: 768px){
 
-  /*Bordes de pagina web*/
   .borde {
     width: 100%;
     padding-left: 1em;
@@ -317,21 +542,10 @@ section {
 
   /*Estructura del Nav*/
   .Estructura-nav {
+    position: relative;
+    width: 100%;
     display: flex;
-  }
-  /* <li id="inicio"><a href="./index.html">Inicio</a></li>
-  <li id="mis_listas"><a href="#">Mis Listas</a></li>
-  <li id="proximo_estrenos"><a href="#">Próximos estrenos</a></li>
-  <li id="novedades"><a href="#">Novedades</a></li>
-  <i class="bi bi-house" id="home"></i>
-  <i class="bi bi-bookmark-heart-fill" id="lists"></i>
-  <i class="bi bi-calendar-fill" id="calendar"></i>
-  <i class="bi bi-bell-fill" id="news"></i> */
-  .display:nth-child(3) {
-    display: none;
-  }
-  .display:nth-child(4) {
-    display: none;
+    flex-direction: row;
   }
 
   .nav-logo {
@@ -346,31 +560,50 @@ section {
   .nav1 {
     position: fixed;
     bottom: 0;
+    left: 0;
     width: 100%;
     background-color: #8174A0;
-    z-index: 1000; /* Asegura que el nav1 esté por encima de otros elementos */
+    z-index: 1000;
+    display: flex;
+    justify-content: space-around;
+    padding: 0.5em 0;
+    border: 1em solid #000000;
+    flex-direction: row;
+  }
+
+  .nav2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #8174A0;
+    z-index: 1000;
     display: flex;
     justify-content: center;
     padding: 0.5em 0;
+    border: 1em solid #000000;
+
   }
 
-  .nav1 a{
-    text-align: center; /* Alinea el texto al centro */
-  }
-
-
-  .nav2 {
-    justify-content: flex-start;
-  }
-
-  .nav2 ul {
-    width: 100%;
+  .nav2 span {
     display: flex;
-    justify-content: flex-start;
+    align-items: center;
   }
 
-  .hero {
-    height: 25em;
+  /* Ajuste de márgenes para evitar solapamientos */
+  .hero, .contenedor-principal {
+    margin-top: 4em; /* Ajustar según altura de nav2 */
+    margin-bottom: 4em; /* Ajustar según altura de nav1 */
+  }
+
+  .display:nth-child(2) {
+    display: block;
+  }
+  .display:nth-child(3) {
+    display: block;
+  }
+  .display_icons {
+   display: none !important;
   }
   
   /* Clasificación por edades */
@@ -432,7 +665,7 @@ section {
   /* Contenedor del carrusel */
   .carrusel-contenedor {
     width: 100%;
-    height: 100%; /* Altura del carrusel (ajusta según tus necesidades) */
+    height: 98%; /* Altura del carrusel (ajusta según tus necesidades) */
     overflow: hidden;
     position: relative;
     margin-bottom: 1em;
@@ -511,7 +744,6 @@ section {
     gap: 1em;
     padding: 1em;
     background-color: rgb(192, 179, 222);
-    padding-bottom: 5em;
   }
 
   .expositor-tarjetas {
@@ -551,6 +783,7 @@ section {
 }
 
 /* Modelo Compacto (Para moviles) */
+
 @media (max-width: 480px) {
 
   .borde {
