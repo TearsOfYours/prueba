@@ -88,6 +88,19 @@ section {
 /* Modelo Grande (Para monitores) */
 @media (min-width: 1024px) {
 
+  .contenedor-busqueda {
+    display: flex;
+    align-items: center;
+    width: 3em;
+    border-radius: 1em;
+    overflow: hidden;
+    transition: width 0.4s ease-in-out;
+  }
+
+  .contenedor-busqueda:focus-within {
+    width: 15em;
+  }
+
   /*Bordes de pagina web*/
   .borde {
     width: 100%;
@@ -128,6 +141,16 @@ section {
 
   .nav2 {
     justify-content: flex-end;
+  }
+
+  button {
+    font-size: 1em;
+    background-color: #534b6774;
+    padding: 0.4em;
+    border-radius: 0.5em;
+    border: none;
+    cursor: pointer;
+    margin-right: 1em;
   }
 
   .hero {
@@ -313,6 +336,7 @@ section {
     gap: 1em;
     padding: 1em;
     background-color: rgb(192, 179, 222);
+    width: 100%;
   }
 
   .expositor-tarjetas {
@@ -394,13 +418,11 @@ section {
     display: none;
   }
 
+  .contenedor-busqueda {
+    display: none;
+  }
   /* Muestra los iconos */
   .display_icons {
-    display: block;
-  }
-
-  /* Muestra el boton del buscador */
-  .display:last-child {
     display: block;
   }
 
@@ -664,6 +686,29 @@ section {
     flex-direction: column;
   }
 
+  .contenedorr-busqueda {
+    display: flex;
+    align-items: center;
+    width: 3em;
+    border-radius: 1em;
+    overflow: hidden;
+    transition: width 0.4s ease-in-out;
+  }
+
+  .contenedorr-busqueda:focus-within {
+    width: 15em;
+  }
+
+  button {
+    font-size: 1em;
+    background-color: #534b6774;
+    padding: 0.4em;
+    border-radius: 0.5em;
+    border: none;
+    cursor: pointer;
+    margin-right: 1em;
+  }
+
   .nav-logo {
     height: 3em;
     /* Ajusta la altura según sea necesario */
@@ -712,7 +757,7 @@ section {
 
   .nav2 span {
     display: flex;
-    align-items: end;
+    align-items: center;
   }
 
   /* Ajuste de márgenes para evitar solapamientos */
